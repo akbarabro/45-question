@@ -8,10 +8,15 @@ let message_to_friend = "HI Raza , would you like to learn some TypeScript"
 console.log(message_to_friend)
 
 // 3  lowercase, uppercase, and titlecase
-let lowerCase = "ghulam akbar"
-let upperCase = "GHULAM AKBAR"
-let titleCase = "Ghulam Akbar"
-console.log(`Lowercase = ${lowerCase}\nUppercase = ${upperCase}\nTitlecase = ${titleCase}`)
+let person_name = "ghulam akbar"
+let lowerCase = person_name.toLowerCase
+let UpperCase = person_name.toUpperCase
+let TitileCase = person_name.replace(/\b\w/g, function(char) {
+    return char.toUpperCase();
+})
+console.log("lowerCase : ",lowerCase)
+console.log("upperCase : ",UpperCase)
+console.log("titleCase : ",TitileCase)
 
 // 4 
 let Famous_quote = "Mother Teresa once said,: "+"Spread love everywhere you go. Let no one ever come to you without leaving happier."
@@ -156,19 +161,110 @@ console.log(y > 4)
 console.log("Is 12 greater than x ? I predict True.")
 console.log(x < 12)
 
-console.log("Is x equal 5 ? I predict True.")
+console.log("Is x equal 5 ? I predict false.")
 console.log(x == 5)
 
-console.log("Is y equal 10 ? I predict True.")
+console.log("Is y equal 10 ? I predict false.")
 console.log(y == 10)
 
-console.log("Is 10 greater than x ? I predict True.")
+console.log("Is 10 greater than x ? I predict false.")
 console.log(x < 10)
 
-console.log("Is y greater than or equal 9 ? I predict True.")
+console.log("Is y greater than or equal 9 ? I predict false.")
 console.log(y >= 9)
 
-console.log("Is x greater than or equal 11 ? I predict True.")
+console.log("Is x greater than or equal 11 ? I predict false.")
 console.log(x >= 11)
 
 // 24
+let a = 10;
+let b = 5;
+
+console.log("Is a equal 10 and b equal to 5 ? I predict True.")
+console.log((a === 10)&&(b === 5))
+
+console.log("Is a equal 5 or b equal to 5 ? I predict True.")
+console.log((a === 5)||(b === 5))
+
+console.log("Is a equal 10 or b equal to 666 ? I predict True.")
+console.log((a === 10)||(b === 666))
+
+console.log("Is a equal 10 or b equal to 5 ? I predict True.")
+console.log((a == 10)&&(b == 5))
+
+console.log("Is a notequal 55 or b notequal to 110 ? I predict True.")
+console.log((a !== 55)&&(b !== 110))
+
+let name1 = "Akbar"
+let name2 = "Ahmed"
+
+console.log("Is name1 equal akbar and name2 equal to ahmed ? I predict false.")
+console.log((name1 === "akbar")&&(name2 === "ahmed"))
+
+console.log("Is name1 equal Akbar or name2 equal to ahmed ? I predict true.")
+console.log((name1 === "Akbar")||(name2 === "ahmed"))
+
+console.log("Is name1 equal raza or name2 equal to Ahmed ? I predict true.")
+console.log((name1 === "raza")||(name2 === "Ahmed"))
+
+console.log("Is name1 notequal raza or name2 notequal to Ahmed ? I predict true.")
+console.log((name1 !== "raza")||(name2 !== "Ahmed"))
+
+console.log("Is a graterthen equal 5 or a equal to 5 ? I predict True.")
+console.log((a >= 5)||(a == 5))
+
+// 25
+let alien_color = ["green" , "yellow" , "red"]
+if (alien_color[0] === "green"){
+    console.log("player just earned 5 points")
+}
+
+// 26
+if (alien_color[0] === "green"){
+    console.log("you earned 5 points for shooting the alien")
+}
+else{console.log("you earned 10 points")}
+
+// 27
+if (alien_color[0] === "green"){
+    console.log("you earned 5 points for shooting the alien")}
+if (alien_color[1] === "yellow"){
+    console.log("you earned 10 points for shooting the alien")}
+if (alien_color[2] === "red"){
+    console.log("you earned 15 points for shooting the alien")}
+
+// 28
+let person_age = 30
+if (person_age === 2 ){ console.log("the person is a baby")}
+if (person_age === 2 && 2<4 ){console.log("the person is a toddler")}
+if (person_age === 4 && 4<13 ){console.log("the person is a kid")}
+if (person_age === 13 && 13<20 ){console.log("the person is a teenager")}
+if (person_age === 20 && 20<65 ){console.log("the person is a adult")}
+if (person_age >= 65 ){console.log("the person is a elder")}
+
+// 29 
+let favorite_fruits = ["Apple","Watter Melon","Grapes"]
+if (favorite_fruits.includes("Apple")){
+    console.log("I also love it Apple")}
+
+if (favorite_fruits.includes("Watter Melon")){
+    console.log("I also love it Water Melon")}
+
+if (favorite_fruits.includes("Grapes")){
+    console.log("I also love it Grapes")}
+    
+if (favorite_fruits.includes("Banana")){
+    console.log("You realy like it !")}
+
+if (favorite_fruits.includes("Mango")){
+    console.log("You realy like it !")}
+
+// 30
+let usernames= ["Admin","Ahmed","Ali","Bakir"]
+for (let name of usernames) {
+    if (name === 'admin') {
+        console.log("Hello admin, would you like to see a status report?");
+    } else {
+        console.log(`Hello ${name}, thank you for logging in again.`);
+    }
+}

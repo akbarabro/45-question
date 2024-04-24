@@ -1,33 +1,30 @@
+"use strict";
 // 45 Questions
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 // 1 
 // All softwares are installed
 // 2 
-var message_to_friend = "HI Raza , would you like to learn some TypeScript";
+let message_to_friend = "HI Raza , would you like to learn some TypeScript";
 console.log(message_to_friend);
 // 3  lowercase, uppercase, and titlecase
-var lowerCase = "ghulam akbar";
-var upperCase = "GHULAM AKBAR";
-var titleCase = "Ghulam Akbar";
-console.log("Lowercase = ".concat(lowerCase, "\nUppercase = ").concat(upperCase, "\nTitlecase = ").concat(titleCase));
+let person_name = "ghulam akbar";
+let lowerCase = person_name.toLowerCase;
+let UpperCase = person_name.toUpperCase;
+let TitileCase = person_name.replace(/\b\w/g, function (char) {
+    return char.toUpperCase();
+});
+console.log("lowerCase : ", lowerCase);
+console.log("upperCase : ", UpperCase);
+console.log("titleCase : ", TitileCase);
 // 4 
-var Famous_quote = "Mother Teresa once said,: " + "Spread love everywhere you go. Let no one ever come to you without leaving happier.";
+let Famous_quote = "Mother Teresa once said,: " + "Spread love everywhere you go. Let no one ever come to you without leaving happier.";
 console.log(Famous_quote);
 // 5
-var Famous_quote2 = "Charlie Chaplin once said,: " + "Simplicity is a difficult thing to achieve.";
+let Famous_quote2 = "Charlie Chaplin once said,: " + "Simplicity is a difficult thing to achieve.";
 console.log(Famous_quote2);
 // 6
-var WhiteSpace = "\tGhulam Akbar\n";
+let WhiteSpace = "\tGhulam Akbar\n";
 console.log(WhiteSpace);
-var strippedName = WhiteSpace.trim();
+let strippedName = WhiteSpace.trim();
 console.log(strippedName);
 // 7 & 8
 console.log(2 + 6);
@@ -35,46 +32,46 @@ console.log(10 - 2);
 console.log(2 * 4);
 console.log(16 / 2);
 // 9
-var MyFavoriteNumber = 8;
-console.log("My Favorite Number Is : ".concat(MyFavoriteNumber));
+let MyFavoriteNumber = 8;
+console.log(`My Favorite Number Is : ${MyFavoriteNumber}`);
 // 10
 // Akbar Abro
 // 14-04-2024
 /*let my_name = "Ghulam Akbar"
 console.log(my_name)*/
 // 11
-var friends_list = ["Ali Raza", "Ahmed", "Bakir"];
+let friends_list = ["Ali Raza", "Ahmed", "Bakir"];
 console.log(friends_list);
 // 12
-console.log("Hi ".concat(friends_list[0], " How Are You Buddy !"));
-console.log("Hi ".concat(friends_list[1], " How Are You Buddy !"));
-console.log("Hi ".concat(friends_list[2], " How Are You Buddy !"));
+console.log(`Hi ${friends_list[0]} How Are You Buddy !`);
+console.log(`Hi ${friends_list[1]} How Are You Buddy !`);
+console.log(`Hi ${friends_list[2]} How Are You Buddy !`);
 // 13
-var transport = ["Bike", "Car", "Bus"];
-console.log("I have an Honda ".concat(transport[0]));
-console.log("But I don't have ".concat(transport[1]));
-console.log("I go to work through the ".concat(transport[2]));
+let transport = ["Bike", "Car", "Bus"];
+console.log(`I have an Honda ${transport[0]}`);
+console.log(`But I don't have ${transport[1]}`);
+console.log(`I go to work through the ${transport[2]}`);
 // 14
-var guest_list = ["Uncle Nisar", "Chacha Ijaz", "Chacha Barkat"];
-console.log("Salam ".concat(guest_list[0], " I have arranged a feast for you on Monday"));
-console.log("Salam ".concat(guest_list[1], " I have arranged a feast for you on Monday"));
-console.log("Salam ".concat(guest_list[2], " I have arranged a feast for you on Monday"));
+let guest_list = ["Uncle Nisar", "Chacha Ijaz", "Chacha Barkat"];
+console.log(`Salam ${guest_list[0]} I have arranged a feast for you on Monday`);
+console.log(`Salam ${guest_list[1]} I have arranged a feast for you on Monday`);
+console.log(`Salam ${guest_list[2]} I have arranged a feast for you on Monday`);
 // 15 
 guest_list.splice(2);
 guest_list.push("Rashid Bhai");
-console.log("Salam ".concat(guest_list[0], " I have arranged a feast for you on Monday"));
-console.log("Salam ".concat(guest_list[1], " I have arranged a feast for you on Monday"));
-console.log("Salam ".concat(guest_list[2], " I have arranged a feast for you on Monday"));
+console.log(`Salam ${guest_list[0]} I have arranged a feast for you on Monday`);
+console.log(`Salam ${guest_list[1]} I have arranged a feast for you on Monday`);
+console.log(`Salam ${guest_list[2]} I have arranged a feast for you on Monday`);
 // 16
 guest_list.unshift("Raza");
 guest_list.splice(2, 0, "Bakir");
 guest_list.push("Akbar");
-console.log("Salam ".concat(guest_list[0], " I have arranged a feast for you on Monday"));
-console.log("Salam ".concat(guest_list[1], " I have arranged a feast for you on Monday"));
-console.log("Salam ".concat(guest_list[2], " I have arranged a feast for you on Monday"));
-console.log("Salam ".concat(guest_list[3], " I have arranged a feast for you on Monday"));
-console.log("Salam ".concat(guest_list[4], " I have arranged a feast for you on Monday"));
-console.log("Salam ".concat(guest_list[5], " I have arranged a feast for you on Monday"));
+console.log(`Salam ${guest_list[0]} I have arranged a feast for you on Monday`);
+console.log(`Salam ${guest_list[1]} I have arranged a feast for you on Monday`);
+console.log(`Salam ${guest_list[2]} I have arranged a feast for you on Monday`);
+console.log(`Salam ${guest_list[3]} I have arranged a feast for you on Monday`);
+console.log(`Salam ${guest_list[4]} I have arranged a feast for you on Monday`);
+console.log(`Salam ${guest_list[5]} I have arranged a feast for you on Monday`);
 // 17
 guest_list.pop();
 guest_list.shift();
@@ -82,44 +79,44 @@ guest_list.pop();
 guest_list.shift();
 guest_list.shift();
 guest_list.push("Uncle Nisar");
-console.log("Salam ".concat(guest_list[0], " I have arranged a feast for you on Sunday"));
-console.log("Salam ".concat(guest_list[1], " I have arranged a feast for you on Sunday"));
+console.log(`Salam ${guest_list[0]} I have arranged a feast for you on Sunday`);
+console.log(`Salam ${guest_list[1]} I have arranged a feast for you on Sunday`);
 console.log(guest_list);
 // 18
-var favorite_places = ["Skardu", "Kashmir", "Naraan", "Muree", "Islamabad"];
+let favorite_places = ["Skardu", "Kashmir", "Naraan", "Muree", "Islamabad"];
 console.log(favorite_places);
-var sorted_places = __spreadArray([], favorite_places, true).sort();
+let sorted_places = [...favorite_places].sort();
 console.log(sorted_places);
-var reverse_places = __spreadArray([], sorted_places, true).reverse();
+let reverse_places = [...sorted_places].reverse();
 console.log(reverse_places);
 // 19
-console.log("There are ".concat(guest_list.length, " guests"));
+console.log(`There are ${guest_list.length} guests`);
 // 20
-var countries_arrey = ["Pakistan", "Iran", "Iraq"];
+let countries_arrey = ["Pakistan", "Iran", "Iraq"];
 console.log(countries_arrey);
-var object1 = {
+let object1 = {
     name: "Laptop",
     category: "Electronic",
     price: 2000
 };
-var object2 = {
+let object2 = {
     name: "Smart Watch",
     category: "Electronic",
     price: 600
 };
-var object3 = {
+let object3 = {
     name: "Sneaker",
     category: "Clothing",
     price: 200
 };
-var object4 = [object1, object2, object3];
+let object4 = [object1, object2, object3];
 console.log(object4);
 // 22
-var array_index = ["Karachi", "Islamabad", "Lahor", "Larkana"];
+let array_index = ["Karachi", "Islamabad", "Lahor", "Larkana"];
 console.log(array_index[2]);
 // 23
-var x = 10;
-var y = 5;
+let x = 10;
+let y = 5;
 console.log("Is x equal 10 ? I predict True.");
 console.log(x == 10);
 console.log("Is x strictly equal 10 ? I predict True.");
@@ -130,13 +127,107 @@ console.log("Is y greater than 4 ? I predict True.");
 console.log(y > 4);
 console.log("Is 12 greater than x ? I predict True.");
 console.log(x < 12);
-console.log("Is x equal 5 ? I predict True.");
+console.log("Is x equal 5 ? I predict false.");
 console.log(x == 5);
-console.log("Is y equal 10 ? I predict True.");
+console.log("Is y equal 10 ? I predict false.");
 console.log(y == 10);
-console.log("Is 10 greater than x ? I predict True.");
+console.log("Is 10 greater than x ? I predict false.");
 console.log(x < 10);
-console.log("Is y greater than or equal 9 ? I predict True.");
+console.log("Is y greater than or equal 9 ? I predict false.");
 console.log(y >= 9);
-console.log("Is x greater than or equal 11 ? I predict True.");
+console.log("Is x greater than or equal 11 ? I predict false.");
 console.log(x >= 11);
+// 24
+let a = 10;
+let b = 5;
+console.log("Is a equal 10 and b equal to 5 ? I predict True.");
+console.log((a === 10) && (b === 5));
+console.log("Is a equal 5 or b equal to 5 ? I predict True.");
+console.log((a === 5) || (b === 5));
+console.log("Is a equal 10 or b equal to 666 ? I predict True.");
+console.log((a === 10) || (b === 666));
+console.log("Is a equal 10 or b equal to 5 ? I predict True.");
+console.log((a == 10) && (b == 5));
+console.log("Is a notequal 55 or b notequal to 110 ? I predict True.");
+console.log((a !== 55) && (b !== 110));
+let name1 = "Akbar";
+let name2 = "Ahmed";
+console.log("Is name1 equal akbar and name2 equal to ahmed ? I predict false.");
+console.log((name1 === "akbar") && (name2 === "ahmed"));
+console.log("Is name1 equal Akbar or name2 equal to ahmed ? I predict true.");
+console.log((name1 === "Akbar") || (name2 === "ahmed"));
+console.log("Is name1 equal raza or name2 equal to Ahmed ? I predict true.");
+console.log((name1 === "raza") || (name2 === "Ahmed"));
+console.log("Is name1 notequal raza or name2 notequal to Ahmed ? I predict true.");
+console.log((name1 !== "raza") || (name2 !== "Ahmed"));
+console.log("Is a graterthen equal 5 or a equal to 5 ? I predict True.");
+console.log((a >= 5) || (a == 5));
+// 25
+let alien_color = ["green", "yellow", "red"];
+if (alien_color[0] === "green") {
+    console.log("player just earned 5 points");
+}
+// 26
+if (alien_color[0] === "green") {
+    console.log("you earned 5 points for shooting the alien");
+}
+else {
+    console.log("you earned 10 points");
+}
+// 27
+if (alien_color[0] === "green") {
+    console.log("you earned 5 points for shooting the alien");
+}
+if (alien_color[1] === "yellow") {
+    console.log("you earned 10 points for shooting the alien");
+}
+if (alien_color[2] === "red") {
+    console.log("you earned 15 points for shooting the alien");
+}
+// 28
+let person_age = 30;
+if (person_age === 2) {
+    console.log("the person is a baby");
+}
+if (person_age === 2 && 2 < 4) {
+    console.log("the person is a toddler");
+}
+if (person_age === 4 && 4 < 13) {
+    console.log("the person is a kid");
+}
+if (person_age === 13 && 13 < 20) {
+    console.log("the person is a teenager");
+}
+if (person_age === 20 && 20 < 65) {
+    console.log("the person is a adult");
+}
+if (person_age >= 65) {
+    console.log("the person is a elder");
+}
+// 29 
+let favorite_fruits = ["Apple", "Watter Melon", "Grapes"];
+if (favorite_fruits.includes("Apple")) {
+    console.log("I also love it Apple");
+}
+if (favorite_fruits.includes("Watter Melon")) {
+    console.log("I also love it Water Melon");
+}
+if (favorite_fruits.includes("Grapes")) {
+    console.log("I also love it Grapes");
+}
+if (favorite_fruits.includes("Banana")) {
+    console.log("You realy like it !");
+}
+if (favorite_fruits.includes("Mango")) {
+    console.log("You realy like it !");
+}
+// 30
+let usernames = ["Admin", "Ahmed", "Ali", "Bakir"];
+for (let name of usernames) {
+    if (name === 'admin') {
+        console.log("Hello admin, would you like to see a status report?");
+    }
+    else {
+        console.log(`Hello ${name}, thank you for logging in again.`);
+    }
+}
