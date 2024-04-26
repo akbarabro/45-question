@@ -231,3 +231,8 @@ for (let name of usernames) {
         console.log(`Hello ${name}, thank you for logging in again.`);
     }
 }
+// 31
+let usernames1 = [];
+if (usernames1.length === 0) {
+    console.log("We need to find some users!");
+}
