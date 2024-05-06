@@ -1,5 +1,6 @@
 "use strict";
 // 45 Questions
+Object.defineProperty(exports, "__esModule", { value: true });
 // 1 
 // All softwares are installed
 // 2 
@@ -43,9 +44,9 @@ console.log(my_name)*/
 let friends_list = ["Ali Raza", "Ahmed", "Bakir"];
 console.log(friends_list);
 // 12
-console.log(`Hi ${friends_list[0]} How Are You Buddy !`);
-console.log(`Hi ${friends_list[1]} How Are You Buddy !`);
-console.log(`Hi ${friends_list[2]} How Are You Buddy !`);
+friends_list.forEach(function (value) {
+    console.log(`Hi ${value}`);
+});
 // 13
 let transport = ["Bike", "Car", "Bus"];
 console.log(`I have an Honda ${transport[0]}`);
@@ -53,15 +54,15 @@ console.log(`But I don't have ${transport[1]}`);
 console.log(`I go to work through the ${transport[2]}`);
 // 14
 let guest_list = ["Uncle Nisar", "Chacha Ijaz", "Chacha Barkat"];
-console.log(`Salam ${guest_list[0]} I have arranged a feast for you on Monday`);
-console.log(`Salam ${guest_list[1]} I have arranged a feast for you on Monday`);
-console.log(`Salam ${guest_list[2]} I have arranged a feast for you on Monday`);
+guest_list.forEach((value) => {
+    console.log(`Salam ${value} I have arranged a feast for you on Monday`);
+});
 // 15 
 guest_list.splice(2);
 guest_list.push("Rashid Bhai");
-console.log(`Salam ${guest_list[0]} I have arranged a feast for you on Monday`);
-console.log(`Salam ${guest_list[1]} I have arranged a feast for you on Monday`);
-console.log(`Salam ${guest_list[2]} I have arranged a feast for you on Monday`);
+guest_list.forEach((value) => {
+    console.log(`Salam ${value} I have arranged a feast for you on Monday`);
+});
 // 16
 guest_list.unshift("Raza");
 guest_list.splice(2, 0, "Bakir");
@@ -87,7 +88,7 @@ let favorite_places = ["Skardu", "Kashmir", "Naraan", "Muree", "Islamabad"];
 console.log(favorite_places);
 let sorted_places = [...favorite_places].sort();
 console.log(sorted_places);
-let reverse_places = [...sorted_places].reverse();
+let reverse_places = [...sorted_places].toReversed();
 console.log(reverse_places);
 // 19
 console.log(`There are ${guest_list.length} guests`);
@@ -236,3 +237,137 @@ let usernames1 = [];
 if (usernames1.length === 0) {
     console.log("We need to find some users!");
 }
+// 32
+let current_user = ["Muhammad", "Ali", "Bakir", "Akbar", "Jaffer"];
+let new_user = ["Ahmed", "Rashid", "Bakir", "Sammad", "Akbar"];
+let check_user = (user_names) => {
+    return current_user.some(user => user.toLowerCase() === user_names.toLocaleLowerCase());
+};
+new_user.forEach(user_names => {
+    if (check_user(user_names)) {
+        console.log(`sorry ${user_names} is already taken. Please enter a new username`);
+    }
+    else {
+        console.log(`${user_names} is available`);
+    }
+});
+// 33
+let Ordinal_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+Ordinal_numbers.forEach((number) => {
+    if (number === 1) {
+        console.log(`${number}st`);
+    }
+    else if (number === 2) {
+        console.log(`${number}nd`);
+    }
+    else if (number === 3) {
+        console.log(`${number}rd`);
+    }
+    else if (number === 4) {
+        console.log(`${number}rd`);
+    }
+    else if (number === 5) {
+        console.log(`${number}rd`);
+    }
+    else if (number === 6) {
+        console.log(`${number}rd`);
+    }
+    else if (number === 7) {
+        console.log(`${number}rd`);
+    }
+    else if (number === 8) {
+        console.log(`${number}rd`);
+    }
+    else if (number === 9) {
+        console.log(`${number}rd`);
+    }
+});
+// 34
+let pizza = ["Margherita Pizza", "Pepperoni Pizza", "Hawaiian Pizza"];
+for (let i = 0; i < pizza.length; i++) {
+    console.log(pizza[i]);
+}
+for (let i = 0; i < pizza.length; i++) {
+    console.log(`I like ${pizza[i]}`);
+}
+console.log("I really like Pizza");
+// 35
+let animals = ["Lion", "Dog", "Cat"];
+for (let i = 0; i < animals.length; i++) {
+    console.log(animals[i]);
+}
+for (let i = 0; i < animals.length; i++) {
+    console.log(`A ${animals[i]} would make a great pet`);
+}
+console.log("Any of these animals would make a great pet!");
+// 36
+function make_shirt(size, message) {
+    console.log(`size : ${size}\nmessage : ${message}`);
+}
+make_shirt("Large", "Love the life");
+// 37 
+function make_shirts(size, message) {
+    if (size === "large" && "Meduim") {
+        console.log(`size : ${size}\nmessage : Ilove TypeScript`);
+    }
+    else {
+        console.log(`size : ${size}\nmessage : ${message}`);
+    }
+}
+make_shirts("large");
+// 38
+let discribe_city = (city_name, country_name) => {
+    console.log(`${city_name} located in ${country_name}`);
+    if (country_name === undefined) {
+        console.log(`${city_name} located in Pakistan`);
+    }
+};
+discribe_city("Karachi");
+discribe_city("Larkana");
+discribe_city("Meccah", "Saudia Arabia");
+// 39
+function city_country(City, Country) {
+    return City + " , " + Country;
+}
+console.log(city_country("Karachi", "Pakistan"));
+console.log(city_country("Larkana", "Pakistan"));
+console.log(city_country("Karbala", "Iraq"));
+// 40
+let make_album = (artist_name, album_title, tracks) => {
+    return { artist_name, album_title, tracks };
+};
+console.log(make_album("Akbar", "Abro", 50));
+// 41
+const magician_names = ["David Copperfield", "Dynamo", "Criss Angel"];
+let show_magicians = () => {
+    return magician_names;
+};
+console.log(show_magicians());
+// 42
+let make_graet = () => {
+    magician_names.forEach(function (value) {
+        console.log(`The Great ${value}`);
+    });
+};
+make_graet();
+// 43 
+const new_magicians = [...magician_names];
+let show_magicians_new = () => {
+    return new_magicians && show_magicians();
+};
+// 44
+let make_sandwiches = (ingredients) => {
+    let sandwich = ingredients.join(", ");
+    return `Here's your Sandwich with ${sandwich}. Enjoy`;
+};
+let ingredients_sandwich = ["Tomato", "Egg", "Butter"];
+console.log(make_sandwiches(ingredients_sandwich));
+let car_creator = (manufacturer, model, ...extras) => {
+    let car = { manufacturer, model, extras };
+    extras.forEach(([key, value]) => {
+        car[key] = value;
+    });
+    return car;
+};
+let car_detail = car_creator("Honda", "CD70", ["color", "Red"]);
+console.log(car_detail);
