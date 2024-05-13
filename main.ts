@@ -33,10 +33,10 @@ let strippedName = WhiteSpace.trim()
 console.log(strippedName)
 
 // 7 & 8
-console.log(2+6)
-console.log(10-2)
-console.log(2*4)
-console.log(16/2)
+console.log(`2+6 = ${2+6}`)
+console.log(`10-2 = ${10-2}`)
+console.log(`2*4 = ${2*4}`)
+console.log(`16/2 = ${16/2}`)
 
 // 9
 let MyFavoriteNumber = 8
@@ -50,7 +50,7 @@ console.log(my_name)*/
 
 // 11
 let friends_list = ["Ali Raza","Ahmed","Bakir"]
-console.log(friends_list)
+friends_list.forEach((name)=>{console.log(`name : ${name}`)})
 
 // 12
 friends_list.forEach(function(value){
@@ -80,12 +80,9 @@ guest_list.forEach((value)=>{
 guest_list.unshift("Raza")
 guest_list.splice(2,0,"Bakir")
 guest_list.push("Akbar")
-console.log(`Salam ${guest_list[0]} I have arranged a feast for you on Monday`)
-console.log(`Salam ${guest_list[1]} I have arranged a feast for you on Monday`)
-console.log(`Salam ${guest_list[2]} I have arranged a feast for you on Monday`)
-console.log(`Salam ${guest_list[3]} I have arranged a feast for you on Monday`)
-console.log(`Salam ${guest_list[4]} I have arranged a feast for you on Monday`)
-console.log(`Salam ${guest_list[5]} I have arranged a feast for you on Monday`)
+guest_list.forEach((value)=>{
+    console.log(`Salam ${value} I have arranged a feast for you on Monday`)
+})
 
 // 17
 guest_list.pop()
@@ -94,8 +91,9 @@ guest_list.pop()
 guest_list.shift()
 guest_list.shift()
 guest_list.push("Uncle Nisar")
-console.log(`Salam ${guest_list[0]} I have arranged a feast for you on Sunday`)
-console.log(`Salam ${guest_list[1]} I have arranged a feast for you on Sunday`)
+guest_list.forEach((value)=>{
+    console.log(`Salam ${value} I have arranged a feast for you on Sunday`)
+})
 console.log(guest_list)
 
 // 18
@@ -237,11 +235,11 @@ if (alien_color[2] === "red"){
 // 28
 let person_age = 30
 if (person_age === 2 ){ console.log("the person is a baby")}
-if (person_age === 2 && 2<4 ){console.log("the person is a toddler")}
-if (person_age === 4 && 4<13 ){console.log("the person is a kid")}
-if (person_age === 13 && 13<20 ){console.log("the person is a teenager")}
-if (person_age === 20 && 20<65 ){console.log("the person is a adult")}
-if (person_age >= 65 ){console.log("the person is a elder")}
+else if (person_age === 2 || 2<=3 ){console.log("the person is a toddler")}
+else if (person_age === 4 || 4<=12 ){console.log("the person is a kid")}
+else if (person_age === 13 || 13<=19 ){console.log("the person is a teenager")}
+else if (person_age === 20 || 20<=64 ){console.log("the person is a adult")}
+else if (person_age >= 65 ){console.log("the person is a elder")}
 
 // 29 
 let favorite_fruits = ["Apple","Watter Melon","Grapes"]
@@ -263,7 +261,7 @@ if (favorite_fruits.includes("Mango")){
 // 30
 let usernames= ["Admin","Ahmed","Ali","Bakir"]
 for (let name of usernames) {
-    if (name === 'admin') {
+    if (name === 'Admin') {
         console.log("Hello admin, would you like to see a status report?");
     } else {
         console.log(`Hello ${name}, thank you for logging in again.`);
@@ -299,25 +297,7 @@ Ordinal_numbers.forEach((number)=>{
     else if(number === 2){
         console.log(`${number}nd`)
     }
-    else if(number === 3){
-        console.log(`${number}rd`)
-    }
-    else if(number === 4){
-        console.log(`${number}rd`)
-    }
-    else if(number === 5){
-        console.log(`${number}rd`)
-    }
-    else if(number === 6){
-        console.log(`${number}rd`)
-    }
-    else if(number === 7){
-        console.log(`${number}rd`)
-    }
-    else if(number === 8){
-        console.log(`${number}rd`)
-    }
-    else if(number === 9){
+    else if(number >= 3){
         console.log(`${number}rd`)
     }
 })
