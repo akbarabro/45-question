@@ -297,7 +297,10 @@ Ordinal_numbers.forEach((number)=>{
     else if(number === 2){
         console.log(`${number}nd`)
     }
-    else if(number >= 3){
+    else if(number === 3){
+        console.log(`${number}rd`)
+    }
+    else if(number >= 4){
         console.log(`${number}rd`)
     }
 })
