@@ -301,7 +301,7 @@ Ordinal_numbers.forEach((number)=>{
         console.log(`${number}rd`)
     }
     else if(number >= 4){
-        console.log(`${number}rd`)
+        console.log(`${number}th`)
     }
 })
 
