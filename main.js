@@ -44,7 +44,7 @@ console.log(my_name)*/
 let friends_list = ["Ali Raza", "Ahmed", "Bakir"];
 friends_list.forEach((name) => { console.log(`name : ${name}`); });
 // 12
-friends_list.forEach(function (value) {
+friends_list.forEach((value) => {
     console.log(`Hi ${value}`);
 });
 // 13
@@ -58,7 +58,7 @@ guest_list.forEach((value) => {
     console.log(`Salam ${value} I have arranged a feast for you on Monday`);
 });
 // 15 
-guest_list.splice(2);
+guest_list.pop();
 guest_list.push("Rashid Bhai");
 guest_list.forEach((value) => {
     console.log(`Salam ${value} I have arranged a feast for you on Monday`);
@@ -71,23 +71,24 @@ guest_list.forEach((value) => {
     console.log(`Salam ${value} I have arranged a feast for you on Monday`);
 });
 // 17
-guest_list.pop();
-guest_list.shift();
-guest_list.pop();
-guest_list.shift();
-guest_list.shift();
-guest_list.push("Uncle Nisar");
+let removedGuests = guest_list.slice(2);
+for (let guest of removedGuests) {
+    console.log(`Sorry ${guest} the dinner has canceld`);
+}
+guest_list.splice(2);
 guest_list.forEach((value) => {
     console.log(`Salam ${value} I have arranged a feast for you on Sunday`);
 });
-console.log(guest_list);
+guest_list.splice(0);
 // 18
 let favorite_places = ["Skardu", "Kashmir", "Naraan", "Muree", "Islamabad"];
-console.log(favorite_places);
+console.log("original : " + favorite_places);
 let sorted_places = [...favorite_places].sort();
-console.log(sorted_places);
+console.log("Sorted : " + sorted_places);
+console.log("original : " + favorite_places);
 let reverse_places = [...sorted_places].toReversed();
-console.log(reverse_places);
+console.log("reverse : " + reverse_places);
+console.log("original : " + favorite_places);
 // 19
 console.log(`There are ${guest_list.length} guests`);
 // 20
@@ -258,8 +259,11 @@ Ordinal_numbers.forEach((number) => {
     else if (number === 2) {
         console.log(`${number}nd`);
     }
-    else if (number >= 3) {
+    else if (number === 3) {
         console.log(`${number}rd`);
+    }
+    else if (number >= 4) {
+        console.log(`${number}th`);
     }
 });
 // 34
