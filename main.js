@@ -291,20 +291,20 @@ function make_shirt(size, message) {
 make_shirt("Large", "Love the life");
 // 37 
 function make_shirts(size, message) {
-    if (size === "large" && "Meduim") {
+    if (size == "Large") {
+        console.log(`size : ${size}\nmessage : Ilove TypeScript`);
+    }
+    if (size == "Meduim") {
         console.log(`size : ${size}\nmessage : Ilove TypeScript`);
     }
     else {
         console.log(`size : ${size}\nmessage : ${message}`);
     }
 }
-make_shirts("large");
+make_shirts("Meduim", "Hi");
 // 38
-let discribe_city = (city_name, country_name) => {
+let discribe_city = (city_name, country_name = "Pakistan") => {
     console.log(`${city_name} located in ${country_name}`);
-    if (country_name === undefined) {
-        console.log(`${city_name} located in Pakistan`);
-    }
 };
 discribe_city("Karachi");
 discribe_city("Larkana");
@@ -318,9 +318,10 @@ console.log(city_country("Larkana", "Pakistan"));
 console.log(city_country("Karbala", "Iraq"));
 // 40
 let make_album = (artist_name, album_title, tracks) => {
-    return { artist_name, album_title, tracks };
+    let object = { artist_name, album_title, tracks };
+    console.log(object);
 };
-console.log(make_album("Akbar", "Abro", 50));
+make_album("Akbar", "Abro", 50);
 // 41
 const magician_names = ["David Copperfield", "Dynamo", "Criss Angel"];
 let show_magicians = () => {

@@ -337,20 +337,17 @@ make_shirt("Large","Love the life")
 
 // 37 
 function make_shirts (size:string,message?:string){
-    if (size === "large"&&"Meduim"){
-        console.log(`size : ${size}\nmessage : Ilove TypeScript`)
-    
-    }
-    else {console.log(`size : ${size}\nmessage : ${message}`)}
+    if (size == "Large"){
+        console.log(`size : ${size}\nmessage : Ilove TypeScript`)}
+    if (size == "Meduim"){
+        console.log(`size : ${size}\nmessage : Ilove TypeScript`)}
+else {console.log(`size : ${size}\nmessage : ${message}`)}
 }
-make_shirts("large")
+make_shirts("Meduim","Hi")
 
 // 38
-let discribe_city = (city_name:string,country_name?:string):void=>{
-     console.log(`${city_name} located in ${country_name}`)
-     if (country_name === undefined){
-        console.log(`${city_name} located in Pakistan`)
-     }
+let discribe_city = (city_name:string,country_name:string = "Pakistan"):void=>{
+    console.log(`${city_name} located in ${country_name}`)
 }
 discribe_city("Karachi")
 discribe_city("Larkana")
@@ -365,10 +362,11 @@ console.log(city_country("Larkana","Pakistan"))
 console.log(city_country("Karbala","Iraq"))
 
 // 40
-let make_album = (artist_name:string,album_title:string,tracks?:number)=>{
-    return {artist_name,album_title,tracks}
+let make_album = (artist_name:string,album_title:string,tracks?:number):void=>{
+    let object  = {artist_name,album_title,tracks}
+    console.log(object);  
 }
-console.log(make_album("Akbar","Abro",50))
+make_album("Akbar","Abro",50)
 
 // 41
 const magician_names = ["David Copperfield","Dynamo","Criss Angel"]
